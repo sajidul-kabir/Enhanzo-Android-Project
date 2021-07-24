@@ -3,15 +3,19 @@ package com.example.photoeditor;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.FileProvider;
 
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.dsphotoeditor.sdk.activity.DsPhotoEditorActivity;
@@ -19,6 +23,8 @@ import com.dsphotoeditor.sdk.utils.DsPhotoEditorConstants;
 import com.example.photoeditor.databinding.ActivityMainBinding;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     int Camera_request_code=12;
     int Result_code= 200;
 
+    private String currentPhotoPath;
 
     ActivityMainBinding binding;
     @Override
@@ -50,6 +57,29 @@ public class MainActivity extends AppCompatActivity {
         binding.cameraBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                String fileName = "photo";
+                File storageDirectory = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+
+                try {
+                    File imageFile = File.createTempFile(fileName,".jpg",storageDirectory);
+                    currentPhotoPath = imageFile.getAbsolutePath();
+
+
+                  Uri imageUri = FileProvider.getUriForFile(MainActivity.this,"com.example.photoeditor.fileprovider",imageFile);
+
+                    Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                    cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT,imageUri);
+                    startActivityForResult(cameraIntent,1);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        /*binding.cameraBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 if (ActivityCompat.checkSelfPermission(MainActivity.this,
                         Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED)
                 {
@@ -63,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivityForResult(cameraIntent, Camera_request_code);
                 }
             }
-        });
+        });*/
     }
 
     @Override
@@ -88,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
 
-        if (requestCode == Camera_request_code) {
+        /*if (requestCode == Camera_request_code) {
             Bitmap photo = (Bitmap)data.getExtras().get("data");
             Uri uri = getImageUri(photo);
 
@@ -98,6 +128,21 @@ public class MainActivity extends AppCompatActivity {
             int[] toolsToHide = {DsPhotoEditorActivity.TOOL_ORIENTATION, DsPhotoEditorActivity.TOOL_CROP};
             dsPhotoEditorIntent.putExtra(DsPhotoEditorConstants.DS_PHOTO_EDITOR_TOOLS_TO_HIDE, toolsToHide);
             startActivityForResult(dsPhotoEditorIntent, Result_code);
+        }*/
+        if(requestCode==1&&resultCode==RESULT_OK){
+
+            Bitmap bitmap = BitmapFactory.decodeFile(currentPhotoPath);
+            Uri uri = getImageUri(bitmap);
+
+            Intent dsPhotoEditorIntent = new Intent(this, DsPhotoEditorActivity.class);
+            dsPhotoEditorIntent.setData(uri);
+            dsPhotoEditorIntent.putExtra(DsPhotoEditorConstants.DS_PHOTO_EDITOR_OUTPUT_DIRECTORY, "PhotoEditor");
+            int[] toolsToHide = {DsPhotoEditorActivity.TOOL_ORIENTATION, DsPhotoEditorActivity.TOOL_CROP};
+            dsPhotoEditorIntent.putExtra(DsPhotoEditorConstants.DS_PHOTO_EDITOR_TOOLS_TO_HIDE, toolsToHide);
+            startActivityForResult(dsPhotoEditorIntent, Result_code);
+
+
+
         }
     }
 
