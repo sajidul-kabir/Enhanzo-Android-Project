@@ -77,23 +77,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        /*binding.cameraBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (ActivityCompat.checkSelfPermission(MainActivity.this,
-                        Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED)
-                {
-                    ActivityCompat.requestPermissions(MainActivity.this,
-                            new String[] {Manifest.permission.CAMERA}, 32);
-                }
 
-                else
-                {
-                    Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                    startActivityForResult(cameraIntent, Camera_request_code);
-                }
-            }
-        });*/
     }
 
     @Override
@@ -118,17 +102,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
 
-        /*if (requestCode == Camera_request_code) {
-            Bitmap photo = (Bitmap)data.getExtras().get("data");
-            Uri uri = getImageUri(photo);
 
-            Intent dsPhotoEditorIntent = new Intent(this, DsPhotoEditorActivity.class);
-            dsPhotoEditorIntent.setData(uri);
-            dsPhotoEditorIntent.putExtra(DsPhotoEditorConstants.DS_PHOTO_EDITOR_OUTPUT_DIRECTORY, "PhotoEditor");
-            int[] toolsToHide = {DsPhotoEditorActivity.TOOL_ORIENTATION, DsPhotoEditorActivity.TOOL_CROP};
-            dsPhotoEditorIntent.putExtra(DsPhotoEditorConstants.DS_PHOTO_EDITOR_TOOLS_TO_HIDE, toolsToHide);
-            startActivityForResult(dsPhotoEditorIntent, Result_code);
-        }*/
         if(requestCode==1&&resultCode==RESULT_OK){
 
             Bitmap bitmap = BitmapFactory.decodeFile(currentPhotoPath);
