@@ -16,6 +16,7 @@
         android:layout_marginStart="16dp"
 
 
+
         android:layout_marginEnd="8dp"
         android:backgroundTint="@color/white"
         android:paddingHorizontal="20dp"
@@ -26,6 +27,7 @@
 
         android:textSize="20sp"
         app:cornerRadius="100dp"
+
 
         app:icon="@drawable/ic_magic_wand"
         app:iconTint="@color/black"
@@ -67,6 +69,7 @@
         app:layout_constraintVertical_bias="0.763"
         app:strokeColor="@color/black"
         app:strokeWidth="2dp" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
