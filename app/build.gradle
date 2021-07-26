@@ -35,6 +35,14 @@ android {
     }
 }
 
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.2.0'

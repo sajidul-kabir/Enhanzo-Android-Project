@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Photo Editor</string>
+    <string name="Tagline">A Comprehensive Photo Editor</string>
+    <string name="App_name">Enhanzo</string>
 </resources>
