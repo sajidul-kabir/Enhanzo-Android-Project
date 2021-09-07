@@ -53,7 +53,7 @@ class EditImageViewModel(private val editImageRepository: EditImageRepository) :
     //region:: Load image filters
 
     private val imageFiltersDataState = MutableLiveData<ImageFiltersDataState>()
-    val imageFiltersDataState: LiveData<ImageFiltersDataState> get() = imageFiltersDataState
+    val imageFiltersUiState: LiveData<ImageFiltersDataState> get() = imageFiltersDataState
 
 
     fun  loadImageFilters(originalImage: Bitmap) {
@@ -61,7 +61,9 @@ class EditImageViewModel(private val editImageRepository: EditImageRepository) :
             runCatching {
                 emitImageFiltersUiState(isLoading = true)
                 editImageRepository.getImageFilters(getPreviewImage(originalImage))
-            }.onSuccess { imagefilters ->
+            }.onSuccess { imageFilters ->
+                emitImageFiltersUiState(imageFilters = imageFilters)
+            }.onFailure {
                 emitImageFiltersUiState(error = it.message.toString())
             }
         }
@@ -70,9 +72,9 @@ class EditImageViewModel(private val editImageRepository: EditImageRepository) :
 
     private fun getPreviewImage(originalImage: Bitmap): Bitmap {
         return runCatching {
-            val previewWidth: 150
+            val previewWidth = 150
             val previewHeight = originalImage.height * previewWidth / originalImage.width
-            Bitmap.createScaledBitmap(, originalImage, previewWidth, previewHeight, false)
+            Bitmap.createScaledBitmap(originalImage, previewWidth, previewHeight, false)
 
         }.getOrDefault(originalImage)
     }
