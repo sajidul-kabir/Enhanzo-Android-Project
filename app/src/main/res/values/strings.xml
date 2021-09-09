@@ -1,3 +1,10 @@
 <resources>
+<<<<<<< HEAD
     <string name="app_name">ENHANZO</string>
+=======
+    <string name="app_name">Image Filters</string>
+    <string name="saved_images">Saved Images</string>
+    <string name="camera">Camera</string>
+    <string name="apply_filters">Apply Filters</string>
+>>>>>>> 4f4f745792871b6e23be51ea2cd66e857a6f5c82
 </resources>
