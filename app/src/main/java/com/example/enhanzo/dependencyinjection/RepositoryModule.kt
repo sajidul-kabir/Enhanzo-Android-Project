@@ -1,7 +1,7 @@
-package com.example.imagefilters.dependencyinjection
+package com.example.enhanzo.dependencyinjection
 
-import com.example.imagefilters.repositories.EditImageRepository
-import com.example.imagefilters.repositories.EditImageRepositoryImpl
+import com.example.enhanzo.repositories.EditImageRepository
+import com.example.enhanzo.repositories.EditImageRepositoryImpl
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 

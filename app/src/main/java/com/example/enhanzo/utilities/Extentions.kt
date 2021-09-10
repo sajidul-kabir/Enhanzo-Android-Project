@@ -1,4 +1,4 @@
-package com.example.imagefilters.utilities
+package com.example.enhanzo.utilities
 
 import android.content.Context
 import android.view.View

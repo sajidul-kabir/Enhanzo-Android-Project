@@ -4,18 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
-    tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-=======
     tools:context=".activities.main.MainActivity">
 
    <androidx.appcompat.widget.AppCompatImageView
@@ -74,6 +62,5 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonCamera"
          />
 
->>>>>>> 4f4f745792871b6e23be51ea2cd66e857a6f5c82
 
 </androidx.constraintlayout.widget.ConstraintLayout>

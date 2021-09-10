@@ -1,4 +1,4 @@
-package com.example.imagefilters.data
+package com.example.enhanzo.data
 
 import android.graphics.Bitmap
 import jp.co.cyberagent.android.gpuimage.filter.GPUImageFilter

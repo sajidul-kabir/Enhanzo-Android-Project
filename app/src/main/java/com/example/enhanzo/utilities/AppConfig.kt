@@ -1,8 +1,8 @@
-package com.example.imagefilters.utilities
+package com.example.enhanzo.utilities
 
 import android.app.Application
-import com.example.imagefilters.dependencyinjection.repositoryModule
-import com.example.imagefilters.dependencyinjection.viewModelModule
+import com.example.enhanzo.dependencyinjection.repositoryModule
+import com.example.enhanzo.dependencyinjection.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 

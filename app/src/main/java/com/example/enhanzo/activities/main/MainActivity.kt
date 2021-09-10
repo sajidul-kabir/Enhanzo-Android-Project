@@ -1,11 +1,11 @@
-package com.example.imagefilters.activities.main
+package com.example.enhanzo.activities.main
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
-import com.example.imagefilters.activities.editimage.EditImageActivity
-import com.example.imagefilters.databinding.ActivityMainBinding
+import androidx.appcompat.app.AppCompatActivity
+import com.example.enhanzo.activities.editimage.EditImageActivity
+import com.example.enhanzo.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

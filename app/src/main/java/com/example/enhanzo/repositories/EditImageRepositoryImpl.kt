@@ -1,4 +1,4 @@
-package com.example.imagefilters.repositories
+package com.example.enhanzo.repositories
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -6,13 +6,12 @@ import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Environment
 import androidx.core.content.FileProvider
-import com.example.imagefilters.data.ImageFilter
+import com.example.enhanzo.data.ImageFilter
 import jp.co.cyberagent.android.gpuimage.GPUImage
 import jp.co.cyberagent.android.gpuimage.filter.*
 import java.io.File
 import java.io.FileOutputStream
 import java.io.InputStream
-import java.lang.Exception
 
 class EditImageRepositoryImpl(private val context: Context): EditImageRepository {
 

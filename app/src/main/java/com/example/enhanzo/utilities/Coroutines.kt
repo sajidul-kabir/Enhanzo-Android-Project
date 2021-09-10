@@ -1,4 +1,4 @@
-package com.example.imagefilters.utilities
+package com.example.enhanzo.utilities
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

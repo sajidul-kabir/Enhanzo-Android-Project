@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.imagefilters">
+    package="com.example.enhanzo">
 
     <application
-        android:name=".utilities.AppConfig"
+        android:name="com.example.enhanzo.utilities.AppConfig"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -11,13 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ImageFilters">
         <activity
-            android:name=".activities.filteredimage.FilteredImageActivity"
+            android:name="com.example.enhanzo.activities.filteredimage.FilteredImageActivity"
             android:exported="true" />
         <activity
-            android:name=".activities.editimage.EditImageActivity"
+            android:name="com.example.enhanzo.activities.editimage.EditImageActivity"
             android:exported="true" />
         <activity
-            android:name=".activities.main.MainActivity"
+            android:name="com.example.enhanzo.activities.main.MainActivity"
             android:exported="true"
             android:theme="@style/FullScreen">
             <intent-filter>

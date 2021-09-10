@@ -1,23 +1,22 @@
-package com.example.imagefilters.activities.editimage
+package com.example.enhanzo.activities.editimage
 
 import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.MutableLiveData
-import com.example.imagefilters.activities.filteredimage.FilteredImageActivity
-import com.example.imagefilters.activities.main.MainActivity
-import com.example.imagefilters.adapters.ImageFiltersAdapter
-import com.example.imagefilters.data.ImageFilter
-import com.example.imagefilters.databinding.ActivityEditImageBinding
-import com.example.imagefilters.listeners.ImageFilterListener
-import com.example.imagefilters.utilities.displayToast
-import com.example.imagefilters.utilities.show
-import com.example.imagefilters.viewmodels.EditImageViewModel
+import com.example.enhanzo.activities.filteredimage.FilteredImageActivity
+import com.example.enhanzo.activities.main.MainActivity
+import com.example.enhanzo.adapters.ImageFiltersAdapter
+import com.example.enhanzo.data.ImageFilter
+import com.example.enhanzo.databinding.ActivityEditImageBinding
+import com.example.enhanzo.listeners.ImageFilterListener
+import com.example.enhanzo.utilities.displayToast
+import com.example.enhanzo.utilities.show
+import com.example.enhanzo.viewmodels.EditImageViewModel
 import jp.co.cyberagent.android.gpuimage.GPUImage
-import org.koin.android.ext.android.bind
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class EditImageActivity : AppCompatActivity(), ImageFilterListener {

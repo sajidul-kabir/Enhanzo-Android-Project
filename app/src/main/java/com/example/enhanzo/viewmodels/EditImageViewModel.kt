@@ -1,13 +1,13 @@
-package com.example.imagefilters.viewmodels
+package com.example.enhanzo.viewmodels
 
 import android.graphics.Bitmap
 import android.net.Uri
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.imagefilters.data.ImageFilter
-import com.example.imagefilters.repositories.EditImageRepository
-import com.example.imagefilters.utilities.Coroutines
+import com.example.enhanzo.data.ImageFilter
+import com.example.enhanzo.repositories.EditImageRepository
+import com.example.enhanzo.utilities.Coroutines
 
 class EditImageViewModel(private val editImageRepository: EditImageRepository) : ViewModel() {
 

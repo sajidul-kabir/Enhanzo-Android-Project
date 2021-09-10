@@ -1,11 +1,11 @@
-package com.example.imagefilters.activities.filteredimage
+package com.example.enhanzo.activities.filteredimage
 
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.imagefilters.activities.editimage.EditImageActivity
-import com.example.imagefilters.databinding.ActivityFilteredImageBinding
+import androidx.appcompat.app.AppCompatActivity
+import com.example.enhanzo.activities.editimage.EditImageActivity
+import com.example.enhanzo.databinding.ActivityFilteredImageBinding
 
 class FilteredImageActivity : AppCompatActivity() {
 

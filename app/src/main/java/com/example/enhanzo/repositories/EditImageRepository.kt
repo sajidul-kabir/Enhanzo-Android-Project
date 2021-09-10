@@ -1,8 +1,8 @@
-package com.example.imagefilters.repositories
+package com.example.enhanzo.repositories
 
 import android.graphics.Bitmap
 import android.net.Uri
-import com.example.imagefilters.data.ImageFilter
+import com.example.enhanzo.data.ImageFilter
 
 interface EditImageRepository {
     suspend fun prepareImagePreview(imageUri: Uri): Bitmap?
