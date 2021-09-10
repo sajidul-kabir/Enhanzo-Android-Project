@@ -7,7 +7,9 @@
         <entry key="..\:/Project/Android/ImageFilters/app/src/main/res/layout/activity_edit_image.xml" value="0.18" />
         <entry key="..\:/Project/Android/ImageFilters/app/src/main/res/layout/activity_filtered_image.xml" value="0.1" />
         <entry key="..\:/Project/Android/ImageFilters/app/src/main/res/layout/activity_main.xml" value="0.17391304347826086" />
+        <entry key="..\:/Project/Android/ImageFilters/app/src/main/res/layout/activity_saved_images.xml" value="0.1" />
         <entry key="..\:/Project/Android/ImageFilters/app/src/main/res/layout/item_container_filter.xml" value="0.25" />
+        <entry key="..\:/Project/Android/ImageFilters/app/src/main/res/layout/item_container_saved_image.xml" value="0.1" />
       </map>
     </option>
   </component>
