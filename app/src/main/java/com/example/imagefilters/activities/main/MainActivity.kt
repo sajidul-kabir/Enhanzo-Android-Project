@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setListeners() {
 
-        binding.buttonCamera.setOnClickListener {
+        binding.buttonFilters.setOnClickListener {
             Intent(
                 Intent.ACTION_PICK,
                 MediaStore.Images.Media.EXTERNAL_CONTENT_URI

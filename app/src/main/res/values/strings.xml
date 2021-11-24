@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">Image Filters</string>
     <string name="camera">Camera</string>
-    <string name="apply_filters">Apply Filters</string>
     <string name="saved_images">Saved Images</string>
+    <string name="select_tools">Select Tools</string>
+    <string name="apply_filters">Apply Filters</string>
+    <string name="take_a_photo">Take a photo</string>
+    <string name="crop_image">Crop Image</string>
+    <string name="adjust_saturation">Adjust Saturation</string>
+    <string name="image_filters">Image Filters</string>
 </resources>
